@@ -1,0 +1,73 @@
+# ==========================================
+# OPEN SOURCE AUTO-X AGENT CONFIGURATION
+# ==========================================
+
+# -- GLOBAL SETTINGS --
+environment: "production" # or "development"
+cycle_days: 30
+targets:
+  impressions: 10000000
+  followers: 20000
+
+# -- MODULE 1: HYPE DETECTION --
+keywords:
+  - "OpenAI"
+  - "GPT-4"
+  - "GPT-5"
+  - "Claude"
+  - "DeepSeek"
+  - "Cursor"
+  - "AGI"
+  - "AI Agents"
+  - "LLaMA"
+
+alpha_list:
+  - "elonmusk"
+  - "sama"
+  - "karpathy"
+  - "ylecun"
+  - "gdb"
+  - "alexandr_wang"
+  - "rowancheung"
+
+event_thresholds:
+  min_likes_per_min: 50
+  hype_score_min: 70
+  max_topic_age_hours: 4
+
+# -- MODULE 4: EXECUTION & RATE CONTROL --
+execution:
+  timezone: "UTC-5" # EST
+  active_hours: "08:00-23:00"
+  max_actions_per_hour: 15
+  daily_quotas:
+    original_tweets: 5
+    mini_threads: 1
+    image_tweets: 2
+    replies_min: 80
+    replies_max: 150
+
+randomization:
+  min_delay_sec: 30
+  max_delay_sec: 180
+  typo_rate: 0.02
+  scroll_chance: 0.85
+
+# -- MODULE 12: SELF-IMPROVEMENT --
+adaptation:
+  enable_auto_kill: true
+  min_attempts_before_kill: 5
+  alpha_percentile: 0.95
+  dead_percentile: 0.01
+
+# -- MODULE 13 & 14: SAFETY --
+safety:
+  max_similarity_threshold: 0.80
+  drop_engagement_trigger_percent: 30
+  drop_duration_hours: 48
+  blocklist:
+    - "crypto presale"
+    - "memecoin"
+    - "nsfw"
+    - "giveaway"
+    - "airdrop"

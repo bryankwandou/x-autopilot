@@ -1,0 +1,31 @@
+{
+  "name": "x-autopilot-assistant",
+  "version": "1.0.0",
+  "description": "Autonomous event-driven AI agent for X growth.",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "node dist/index.js",
+    "dev": "ts-node src/index.ts",
+    "build": "tsc",
+    "test": "jest"
+  },
+  "dependencies": {
+    "cron": "^3.1.7",
+    "dotenv": "^16.4.5",
+    "js-yaml": "^4.1.1",
+    "openai": "^4.52.7",
+    "playwright": "^1.45.0",
+    "sqlite3": "^5.1.7",
+    "winston": "^3.13.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/js-yaml": "^4.0.9",
+    "@types/node": "^20.14.10",
+    "@types/sqlite3": "^3.1.11",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.3"
+  }
+}

@@ -1,0 +1,35 @@
+# X-Autopilot-Assistant Default Configuration
+
+x:
+  username: ""
+  auth_token: "" # Paste your auth_token cookie here
+  ct0: "" # Paste your ct0 cookie here
+  daily_post_limit: 5
+  daily_reply_limit: 150
+
+llm:
+  provider: "openai"
+  model: "gpt-4o"
+  temperature: 0.7
+
+thresholds:
+  min_hype_score: 70
+  min_velocity: 100
+  max_repetition_similarity: 0.8
+
+risk_mitigation:
+  fail_safe_trigger_drop: 0.3 # Toggle fail-safe if engagement drops 30%
+  cooldown_between_replies: [30, 180] # Randomized range in seconds
+
+# List of keywords/sources to monitor
+monitors:
+  keywords:
+    - "AI"
+    - "AGI"
+    - "LLM"
+    - "OpenAI"
+    - "Sam Altman"
+    - "DeepSeek"
+  github_topics:
+    - "deep-learning"
+    - "autonomous-agents"
